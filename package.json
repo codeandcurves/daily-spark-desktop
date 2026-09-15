@@ -1,7 +1,7 @@
 {
   "name": "daily-spark-desktop",
-  "version": "1.4.0",
-  "description": "A small Windows companion that brings useful ideas, reminders, suggestions and conversation takeaways back at the right time.",
+  "version": "1.5.0",
+  "description": "A quiet Windows companion that resurfaces useful ideas, reminders and takeaways from your AI conversations.",
   "author": "codeandcurves",
   "license": "MIT",
   "main": "main.js",
@@ -10,6 +10,7 @@
   "build": {
     "appId": "com.dailyspark.desktop",
     "productName": "Daily Spark",
+    "artifactName": "Daily-Spark-Setup-${version}.${ext}",
     "files": ["main.js", "preload.js", "app/**/*"],
     "win": {"target": "nsis"},
     "nsis": {"oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true, "createStartMenuShortcut": true}
