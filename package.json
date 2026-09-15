@@ -5,24 +5,13 @@
   "author": "codeandcurves",
   "license": "MIT",
   "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "dist": "electron-builder --win nsis"
-  },
-  "devDependencies": {
-    "electron": "^39.0.0",
-    "electron-builder": "^26.0.12"
-  },
+  "scripts": {"start": "electron .", "dist": "electron-builder --win nsis"},
+  "devDependencies": {"electron": "^39.0.0", "electron-builder": "^26.0.12"},
   "build": {
     "appId": "com.dailyspark.desktop",
     "productName": "Daily Spark",
-    "files": ["main.js", "preload.js", "app/**/*", "assets/**/*"],
-    "win": {"target": "nsis", "icon": "assets/tray.png"},
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true
-    }
+    "files": ["main.js", "preload.js", "app/**/*"],
+    "win": {"target": "nsis"},
+    "nsis": {"oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true, "createStartMenuShortcut": true}
   }
 }
