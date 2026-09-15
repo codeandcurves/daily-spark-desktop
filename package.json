@@ -1,18 +1,29 @@
 {
   "name": "daily-spark-desktop",
-  "version": "1.5.0",
-  "description": "A quiet Windows companion that resurfaces useful ideas, reminders and takeaways from your AI conversations.",
+  "version": "2.0.0",
+  "description": "A local-first Windows companion that turns captured AI conversation takeaways into ideas, suggestions, tasks, reminders, jokes and breaks.",
   "author": "codeandcurves",
   "license": "MIT",
   "main": "main.js",
-  "scripts": {"start": "electron .", "dist": "electron-builder --win nsis"},
-  "devDependencies": {"electron": "^39.0.0", "electron-builder": "^26.0.12"},
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12"
+  },
   "build": {
-    "appId": "com.dailyspark.desktop",
-    "productName": "Daily Spark",
-    "artifactName": "Daily-Spark-Setup-${version}.${ext}",
+    "appId": "com.dailyspark.companion.v2",
+    "productName": "Daily Spark 2",
+    "artifactName": "Daily-Spark-2-Setup-${version}.${ext}",
     "files": ["main.js", "preload.js", "app/**/*"],
     "win": {"target": "nsis"},
-    "nsis": {"oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true, "createStartMenuShortcut": true}
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
   }
 }
