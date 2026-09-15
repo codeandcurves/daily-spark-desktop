@@ -1,7 +1,7 @@
 {
   "name": "daily-spark-desktop",
-  "version": "1.2.0",
-  "description": "A compact Windows desktop companion for calm, randomized inspiration.",
+  "version": "1.4.0",
+  "description": "A small Windows companion that brings useful ideas, reminders, suggestions and conversation takeaways back at the right time.",
   "author": "codeandcurves",
   "license": "MIT",
   "main": "main.js",
