@@ -1,8 +1,8 @@
-name: Build Windows Installer
+name: Build Daily Spark 2 Windows Installer
 
 on:
   push:
-    branches: [main]
+    branches: [daily-spark-2]
   workflow_dispatch:
 
 permissions:
@@ -14,23 +14,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
-
       - name: Install dependencies
-        run: npm ci
-
+        run: npm install
       - name: Build Windows installer
         run: npm run dist
-
       - name: Upload installer
         uses: actions/upload-artifact@v4
         with:
-          name: Daily-Spark-Windows-v1.5.0
+          name: Daily-Spark-2-Windows-v2.0.0
           path: |
             dist/*.exe
             dist/*.blockmap
